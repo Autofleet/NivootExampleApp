@@ -2,6 +2,7 @@ package io.base86.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import io.autofleet.nivoot.manager.NivootLauncher
 import io.base86.myapplication.databinding.ActivityMainBinding
 
@@ -25,10 +26,16 @@ class MainActivity : AppCompatActivity() {
         setLisetners()
     }
 
+    // when clicking back button
+    fun onCloseHandler() {
+        Log.d("MainActivity", "nivoot has been closed")
+    }
+
     fun setLisetners() {
         binding.buttonStartSdkNavigation.setOnClickListener {
             NivootLauncher.startActivity(
                 this,
+                onClose=::onCloseHandler,
                 token=this.getToken(),
                 wsUrl=BASE_PATH)
         }
