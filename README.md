@@ -38,11 +38,10 @@ STEPS:
 
         // TODO: get token from network call, shared pref, local storage...
         fun getToken(): String {
-            return "YOUR_TOKEN"
+            return "YOUR_TOKEN_HERE"
         }
 
         private val BASE_PATH = "BASE_PATH_HERE"
-
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -53,10 +52,16 @@ STEPS:
             setLisetners()
         }
 
+        // when clicking back button
+        fun onCloseHandler() {
+            Log.d("MainActivity", "nivoot has been closed")
+        }
+
         fun setLisetners() {
             binding.buttonStartSdkNavigation.setOnClickListener {
                 NivootLauncher.startActivity(
                     this,
+                    onClose=::onCloseHandler,
                     token=this.getToken(),
                     wsUrl=BASE_PATH)
             }
