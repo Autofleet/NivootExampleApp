@@ -8,7 +8,7 @@ STEPS:
 
     dependencies {
         ....
-        implementation 'com.github.Autofleet:nivoot:1.0.0'
+        implementation 'com.github.Autofleet:nivoot:1.0.1'
         ....
     }
     

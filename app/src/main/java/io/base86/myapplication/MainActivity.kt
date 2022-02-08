@@ -12,10 +12,10 @@ class MainActivity : AppCompatActivity() {
 
     // TODO: get token from network call, shared pref, local storage...
     fun getToken(): String {
-        return "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZWhpY2xlSWQiOiJhMDA0ZWNmZS1mZGRiLTQ2OTYtOTdmYy03YWQ1NGQ5YmI3OTEiLCJpYXQiOjE2NDI1ODU1NTB9.oJicp0QJaCuXz0xO5xb8rWJksPkfD4l0ucoXZm3p_E8"
+        return "YOUR_TOKEN_HERE"
     }
 
-    private val BASE_PATH = "driver-gateway.autofleet.io"
+    private val BASE_PATH = "BASE_PATH_HERE"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
