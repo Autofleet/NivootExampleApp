@@ -1,10 +1,9 @@
 # nivoot example app
-example app using autofleet navigation android sdk
+This is an example app using the Autofleet navigation android SDK
 
 
-## HOW TO USE NIVOOT?
-STEPS:
-1.app/build.gradle (app level) - add nivoot dependency
+## HOW TO USE NIVOOT
+### Step 1: app/build.gradle (app level) - add nivoot dependency
 
     dependencies {
         ....
@@ -13,8 +12,7 @@ STEPS:
     }
     
     
-    
-2.build.gradle (project level) - add jitpack maven repo at the bottom
+### Step 2: build.gradle (project level) - add jitpack maven repo at the bottom
 
     allprojects {
       repositories {
@@ -24,12 +22,13 @@ STEPS:
           }
       }
     }
-3.prerequirement:
-
-    BASE_URL - url to autofleet environement
-    TOKEN - token that will be fetched from autofleet api through server to server authentication and then will be sent to the driver-app by your server.
     
-4.implementation example:
+### Step 3: Pre-requirement:
+
+    BASE_URL - URL to an Autofleet environement
+    TOKEN - the token that will be fetched from the Autofleet API through server to server authentication and then will be sent to the driver-app by your server
+    
+### Step 4: Implementation example:
 
 
     class MainActivity : AppCompatActivity() {
@@ -52,7 +51,7 @@ STEPS:
             setLisetners()
         }
 
-        // when clicking back button
+        // when clicking the back button
         fun onCloseHandler() {
             Log.d("MainActivity", "nivoot has been closed")
         }
