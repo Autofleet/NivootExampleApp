@@ -7,7 +7,7 @@ This is an example app using the Autofleet navigation android SDK
 
     dependencies {
         ....
-        implementation 'com.github.Autofleet:nivoot:1.0.5'
+        implementation 'com.github.Autofleet:nivoot:1.0.6'
         ....
     }
     
